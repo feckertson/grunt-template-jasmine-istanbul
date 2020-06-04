@@ -40,6 +40,8 @@ exports.reporter = {
 		sandbox = new MockBrowser();
 		/* eslint-disable no-eval */
 		// instrument and load reporter
+		/* eslint-disable no-unused-vars */
+		var window = sandbox;
 		eval(instrumenter.instrumentSync(
 				grunt.file.read('src/main/js/reporter.js'),
 				'src/main/js/reporter.js'));
